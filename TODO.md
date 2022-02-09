@@ -1,6 +1,6 @@
 ### TODO
 - [ ] ASCII converter  
-- [ ] Ceasar encrypt/decrypt  
+- [x] Ceasar encrypt/decrypt  
 - [ ] Vigenère encrypt/decrypt  
 - [ ] Hash generator   
 
