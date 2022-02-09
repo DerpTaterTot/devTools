@@ -9,8 +9,8 @@ func CeasarEncryption(shift int, rawtext string) string {
 
 		letterascii += shift
 
-		if letterascii > 172 {
-			letterascii = letterascii - 32 // letterascii - 172 + 140, basically finding the ascii overcount and adding it back from the beginning
+		if letterascii > 122 {
+			letterascii = letterascii - 25 // letterascii - 122 + 97, basically finding the ascii overcount and adding it back from the beginning
 		}
 
 		encryptedtext += string(rune(letterascii)) // beter way of doing this??
