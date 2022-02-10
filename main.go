@@ -76,6 +76,25 @@ func main() {
 					return nil
 				},
 			},
+			{
+				Name:    "webptopng",
+				Aliases: []string{"wp"},
+				Usage:   "convert webp to png",
+				Flags: []cli.Flag{
+					&cli.StringFlag{
+						Name:     "file",
+						Aliases:  []string{"f"},
+						Usage:    "location of file",
+						Required: true,
+					},
+				},
+				Action: func(c *cli.Context) error {
+					tools.WEBPtoPNG(c.String("file"))
+
+					fmt.Printf("Converted %s to PNG", c.String("file"))
+					return nil
+				},
+			},
 		},
 	}
 	err := app.Run(os.Args)
